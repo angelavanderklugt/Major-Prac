@@ -3,13 +3,14 @@
 #include "Story.h"
 using namespace std;
 #include <iostream>
-
+//Declaring the variable that will be used.
 string choice1, choice2, choice3, MinorChoice1, MinorChoice2;
 string Discovery;
+//Creating Event class that inherits from the base class Story (Polymorphism). (This class is for Mountain terrain).
 class Event : public Story {
 
 public:
-// This is the Events for the Mountain
+// This is the Events for the Mountain. It will output different text depending on choices and which animal you are given.
 	void Events(){ 
 		cout << "You see some trees and a small lake. Which way do you want to go?" << endl;
 		cout << "Trees/Lake"<<endl;
@@ -98,6 +99,7 @@ public:
 			}
 		}
 	}
+//Returns the score and what you discovered.
 	int getScore() {
 		return score;
 	}
@@ -107,10 +109,10 @@ public:
 };
 
 
-
+//Creating Event2 Class which inherits from Story base class. (This class is for Jungle terrain).
 class Event2 : public Story{
 public:
-// This is the Events for the Jungle
+// This is the Events for the Jungle. It will output different text depending on choices and which animal you are given.
 	void Events(){
 		cout << "------------------------------------------------------------------------------------------" << endl;
 		cout << "You reach the edge of a vast jungle and see to your left, a flowing river heading deeper into the jungle, and to your right, a trail leading along the edge. Where do you go?" << endl;
@@ -386,10 +388,10 @@ public:
 	}
 
 };
-
+//Creating Event3 class which inherits from Story base class. (This is for Savanna terrain).
 class Event3 : public Story{
 public: 
-// This is the Events for the Savanna
+// This is the Events for the Savanna. It will output different text depending on choices and which animal you are given.
 	void Events(){
 		cout << "You see a pond and a group of trees, Where do you go?" << endl;
 		cout << "Pond/Trees" << endl;
